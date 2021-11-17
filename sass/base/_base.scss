@@ -1,0 +1,15 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+ 
+html{
+    //define quanto 1rem é
+    font-size: 62.5%; /* font para alterar tudo de uma vez. esse valor * 16px q é o tamanho padrao da font = 10px q é o a gente quer*/
+}
+
+body{
+    box-sizing: border-box;
+}
+$unction: #FFFFFF; 

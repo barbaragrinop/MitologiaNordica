@@ -1,0 +1,10 @@
+//vai anexar um pseudo-elemento dentro do elemento
+//q vai limpar os floats
+@mixin clearfix{
+    &::after {
+        content: ""; //vazio pq n quer ver
+        display: table; //padra
+        clear: both; //limpando dos dois lados
+    }
+}
+$unction: #FFFFFF; 

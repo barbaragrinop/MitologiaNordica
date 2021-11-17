@@ -1,0 +1,97 @@
+.composition{
+    position: relative;
+    margin-left: -2%;
+
+    > p{
+        background-color: $color-grey-light-1;
+        color: $color-grey-light-1;
+    }
+
+    > img {
+        border: 5px solid yellow;
+    }
+
+    &__photo{
+        width: 55%;
+        height: 35rem;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+        border-radius: 2px;
+        position: absolute;
+        transition: all .2s;
+        z-index: 10;
+        outline-offset: 2rem;
+
+        &--border{
+            border: 10px solid;
+            border-image-slice: 1;
+            border-width: 5px;
+            border-image-source: linear-gradient(to left,#752424, #e96c6c );
+        }
+        
+        &--p1{
+            left: 0rem;
+            top: 5rem;
+            // transform: rotate(-22deg);
+        }
+
+        &--p2{
+            left: 4rem;
+            top: 3rem;
+            // transform: rotate(-14deg);
+        }
+
+        &--p3{
+            left: 8rem;
+            top: 1rem;
+            // transform: rotate(-7deg);
+        }
+
+        &--p4{
+            left: 12rem;
+            top: -.5rem;
+            // transform: rotate(0deg);
+        }
+
+        &--p5{
+            left: 16rem;
+            top:  -2.4rem;
+            // transform: rotate(7deg);
+        }
+
+        &--p6{
+            left: 20rem;
+            top: -.5rem;
+            // transform: rotate(14deg);
+        }
+
+        &--p7{
+            left: 24rem;
+            top: 1.5rem;
+            // transform: rotate(21deg);
+        }
+
+        &--p8{
+            left: 28rem;
+            top: 3rem;
+            // transform: rotate(28deg);
+        }
+
+        &--p9{
+            left: 32rem;
+            top: 4.5rem;
+            // transform: rotate(35deg);
+        }
+
+        &:hover{ 
+            // outline: .2rem solid $color-grey-light-2; //esse o outline offset definem as bordas
+            transform: scale(.9) translateY(-.9rem); //aumenta em escala e no y
+            // box-shadow: 0 2.5rem 4rem rgba($color-black, .05);
+            z-index: 20;
+        }
+    }
+
+    &:hover &__photo:not(:hover){ //pegando as fotos q não estao com o hover e dimuindo seus tamanhos
+        transform: scale(.99);
+    }
+}
+

@@ -1,0 +1,32 @@
+
+.header{
+    height: 95vh; /* diz que a cada ponta deve ter 95% de altura */
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-yellow-light, 0.8), 
+        rgba($color-yellow-dark, 0.8)) , 
+        url(../img/mitologia-deuses.jpg); 
+    background-size: cover; /* independe do tamanho do elemento, sempre vai tentar manter dentro da caixa q tá */
+    background-position:top; /* garante q sempre esteja junto do topo */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* desenha formas */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* desenha formas */
+    position: relative;
+
+    &__logo-box{
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &__logo{
+        height: 3.5rem;   
+    }
+    
+    &__text-box{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}

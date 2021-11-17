@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "landing page for natours",
+  "main": "index.js",
+  "scripts": {
+    "compile-sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barbaragrinop/front-end.git"
+  },
+  "author": "Barbara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barbaragrinop/front-end/issues"
+  },
+  "homepage": "https://github.com/barbaragrinop/front-end#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

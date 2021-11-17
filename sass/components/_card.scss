@@ -1,0 +1,185 @@
+.card{
+    //funcionalities
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 52rem;
+
+    
+    &__side{
+        height: 52rem;
+        transition: all .5s ease;
+        position: absolute; //tentam se encaixar em sua largura
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden; //consertar erro dos efeitos
+        border-radius: 30px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &--front{
+            background-color: $color-white;
+        }
+
+        &--back{
+            transform: rotateY(180deg);
+            
+            &-1{
+                background-image: linear-gradient(to left bottom, #ffffff, #bebbbb);
+            }
+
+            &-2{
+                background-image: linear-gradient(to right bottom, #ffffff, #bebbbb);
+            }
+
+            &-3{
+                background-image: linear-gradient(to right bottom, #ffffff, #bebbbb);
+            }
+
+            &-4{
+                background-image: linear-gradient(to right bottom, #ffffff, #bebbbb);
+            }
+
+            &-5{
+                background-image: linear-gradient(to right bottom, #ffffff, #bebbbb);
+            }
+
+            &-6{
+                background-image: linear-gradient(to right bottom, #ffffff, #bebbbb);
+            }
+
+        }
+    }
+
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
+        // background-color: orchid;
+    }
+
+    &:hover &__side--back{
+        transform: rotateY(0);
+        // background-color: orchid;
+    }
+
+    //front side styling
+    &__picture{
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        // -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        // clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        
+        &--1{
+            background-image: linear-gradient(to right bottom, #817f0c, rgb(83, 47, 107)), url(../../img/odin.jpg);
+        }
+
+        &--2{
+            background-image: linear-gradient(to right bottom, #8343cc, rgb(39, 75, 235)), url(../../img/freya.jpg);
+        }
+
+        &--3{
+            background-image: linear-gradient(to right bottom, rgb(0, 4, 235), rgba(143, 13, 13, 0.493)), url(../../img/thor.jpg);
+        }
+
+        &--4{
+            background-image: linear-gradient(to right bottom, rgb(133, 133, 138), rgba(62, 63, 21, 0.493)), url(../../img/frigga.jpg);
+        }
+
+        &--5{
+            background-image: linear-gradient(to right bottom, rgb(183, 184, 233), rgba(16, 73, 4, 0.74)), url(../../img/loki.jpg);
+        }
+
+        &--6{
+            background-image: linear-gradient(to right bottom, rgb(95, 48, 3), rgba(77, 72, 72, 0.493)), url(../../img/hel.jpg);
+        }
+    }
+
+    &__heading{
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-white;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        text-align: right;
+        width: 70%;
+    }
+
+    &__heading-span{
+        padding: 1rem 1.5rem;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+        &--1{
+            background-image: linear-gradient(to right bottom, rgba(#817f0c, .85), rgba(83, 47, 107, .85));
+        }
+
+        &--2{
+            background-image: linear-gradient(to right bottom, #8343cc, rgba(39, 75, 235, .85));
+        }
+
+        &--3{
+            background-image: linear-gradient(to right bottom, rgba(0, 4, 235, .85), rgba(143, 13, 13, 0.493));
+        }
+
+        &--4{
+            background-image: linear-gradient(to right bottom, rgb(133, 133, 138), rgba(62, 63, 21, 0.493));
+        }
+
+        &--5{
+            background-image: linear-gradient(to right bottom, rgb(183, 184, 233), rgba(16, 73, 4, 0.74));
+        }
+
+        &--6{
+            background-image: linear-gradient(to right bottom, rgb(95, 48, 3), rgba(77, 72, 72, 0.493));
+        }
+    }
+
+    &__details{
+        ul{
+            padding: 3rem;
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li{
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+                
+
+                &:not(:last-child){
+                    border-bottom: 1px solid $color-grey-light-3;
+                }
+            }
+        }
+    }
+
+    &__cta{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+
+    }
+
+    &__price-box{
+        text-align: center;
+        color: $color-white;
+        margin-bottom: 8rem;
+    }
+
+    &__price-only{
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value{
+        font-size: 6rem;
+        font-weight: 100;
+    }
+
+}
