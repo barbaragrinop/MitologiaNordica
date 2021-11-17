@@ -21,7 +21,7 @@
 
 ### :keyboard: No seu terminal, rode:
    
-   >- git clone https://github.com/barbaragrinop/Mitologia.git
+   >- git clone https://github.com/barbaragrinop/MitologiaNordica.git
    >- npm i
    >- npm run compile-sass
   
